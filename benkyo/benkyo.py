@@ -29,7 +29,7 @@ def genki_chapter_link(chapter: str):
     #return rx.text(f"{chapter}")
     return rx.link(f"Chapter {chapter}", href=f"/genki/{chapter}")
 
-@rx.page(route="/genki")
+@rx.page(route="genki")
 def genki_overview():
     #chapters = file_parse_incl("jisho/Genki/","Chapter")
     chapters = list(range(0,24))
@@ -38,7 +38,7 @@ def genki_overview():
         rx.foreach(chapters,genki_chapter_link)
     )
 
-@rx.page(route="/genki/[genki_chapter_num]")
+@rx.page(route="genki/[genki_chapter_num]")
 def genki_chapter_page():
     #test = str(rx.State.genki_chapter_num)
     #print(rx.State.genki_chapter_num)
