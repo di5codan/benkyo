@@ -16,6 +16,9 @@ jobs:
         run: |
           git submodule update --init --recursive
 
+      - name: Display path
+        run: |
+          ls
       - name: Set up Python from `.python-version` 🐍
         uses: actions/setup-python@v5
         with:
