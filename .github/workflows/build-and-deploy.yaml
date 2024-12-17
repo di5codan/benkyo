@@ -18,7 +18,7 @@ jobs:
 
       - name: Display path
         run: |
-          ls
+          ls jisho
       - name: Set up Python from `.python-version` 🐍
         uses: actions/setup-python@v5
         with:
