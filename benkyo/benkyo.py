@@ -12,7 +12,7 @@ class State(rx.State):
 
 def index() -> rx.Component:
     # Welcome Page (Index)
-    chapters = file_parse_incl("../jisho/Genki/","Chapter")
+    chapters = file_parse_incl("jisho/Genki/","Chapter")
     return rx.container(
         rx.vstack(
             rx.text("This will be a cool frontend for my Jisho notes repository!"),
