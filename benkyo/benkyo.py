@@ -20,14 +20,14 @@ def index() -> rx.Component:
         rx.vstack(
             rx.text("This will be a cool frontend for my Jisho notes repository!"),
             rx.text("今ここで何もがない ¯\_(⊙_ʖ⊙)_/¯"),
-            rx.link("Genki Page",href="/genki"),
+            rx.link("Genki Page",href="genki"),
             rx.text("Shoutout to さおりさん + トム・ハンクス")
         ),
     )
 
 def genki_chapter_link(chapter: str):
     #return rx.text(f"{chapter}")
-    return rx.link(f"Chapter {chapter}", href=f"/genki/{chapter}")
+    return rx.link(f"Chapter {chapter}", href=f"genki/{chapter}")
 
 @rx.page(route="genki")
 def genki_overview():
