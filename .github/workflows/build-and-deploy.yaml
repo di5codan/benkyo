@@ -12,6 +12,10 @@ jobs:
       - name: Checkout the repository 🛎️
         uses: actions/checkout@v4
 
+      - name: Update submodules if present
+        run: |
+          git submodule update --init --recursive
+
       - name: Set up Python from `.python-version` 🐍
         uses: actions/setup-python@v5
         with:
